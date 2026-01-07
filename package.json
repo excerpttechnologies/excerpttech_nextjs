@@ -1,0 +1,51 @@
+{
+  "name": "nextjs-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/material": "^7.3.6",
+    "axios": "^1.13.2",
+<<<<<<< HEAD
+    "embla-carousel-autoplay": "^8.6.0",
+    "embla-carousel-react": "^8.6.0",
+=======
+<<<<<<< HEAD
+    "embla-carousel-autoplay": "^8.6.0",
+    "embla-carousel-react": "^8.6.0",
+=======
+>>>>>>> a4dd6bd13fe9c11c027778c3227cd524dccba934
+>>>>>>> db998858510a2d2ae1d26f7043e49f35b5035bdb
+    "mongoose": "^9.1.0",
+    "next": "^15.1.3",
+    "next-themes": "^0.4.6",
+    "nodemailer": "^7.0.12",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-ga4": "^2.1.0",
+    "react-helmet-async": "^2.0.5",
+    "react-icons": "^5.5.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+<<<<<<< HEAD
+=======
+    "@types/mongoose": "^5.11.96",
+>>>>>>> a4dd6bd13fe9c11c027778c3227cd524dccba934
+    "@types/node": "^20",
+    "@types/nodemailer": "^7.0.4",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.1.0",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
