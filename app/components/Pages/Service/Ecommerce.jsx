@@ -17,7 +17,7 @@ const Ecommerce = () => {
           content="Excerpt Technologies Private Limited offers comprehensive E-commerce solutions to help businesses establish a strong online presence and drive sales."
         />
       </Helmet>
-      
+
       <section
         style={{
           backgroundImage: "url(/images/e01.webp)",
@@ -42,16 +42,25 @@ const Ecommerce = () => {
         <div className="container">
           <div className="row g-4">
             <div className="col-md-8 mb-40">
-              <div className="img-wrapper mb-25 equal-image-wrapper" style={{ height: '400px' }}>
-                <Image 
-                  src="/images/ecommerce1.webp" 
-                  className="img-fluid equal-image" 
+              <div className="img-wrapper mb-25 equal-image-wrapper" style={{ height: 'auto', minHeight: 'unset' }}>
+                <Image
+                  src="/images/ecommerce1.webp"
+                  className="img-fluid equal-image"
                   alt="E-commerce Solutions"
-                  width={800}
-                  height={400}
+                  width={400}
+                  height={300}
                   loading="lazy"
                   decoding="async"
+                  style={{
+                    width: '90%',
+                    height: '200px',
+                    display: 'block',
+                    marginLeft: 'auto',
+                    marginRight: 'auto',
+                    borderRadius: '12px'
+                  }}
                 />
+
               </div>
 
               <h4 className="heading-4 mb-25">E-Commerce solutions.</h4>
@@ -60,34 +69,40 @@ const Ecommerce = () => {
                 An E-Commerce Website is an online platform that allows businesses to sell products or services directly to customers over the internet. It includes product catalogs, shopping carts, secure payment gateways, and order management, providing a convenient and seamless shopping experience. E-commerce websites help businesses expand their reach, boost sales, and manage operations efficiently.
               </div>
 
-              <div className="row g-4 mb-25">
-                <div className="col-md-6">
-                  <div className="img-wrapper equal-image-wrapper">
-                    <Image
-                      src="/images/ecommerce2.webp"
-                      className="img-fluid equal-image"
-                      alt="E-commerce Features"
-                      width={400}
-                      height={300}
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
+
+
+              <div className="row g-1  mb-25 ">
+                <div className="col-md-6 mt-3">
+                  <Image
+                    src="/images/ecommerce2.webp"
+                    alt="E-commerce Features"
+                    width={400}
+                    height={300}
+                    style={{
+                      width: '100%',
+                      height: '200px',
+                      objectFit: 'cover',
+                      borderRadius: '12px'
+                    }}
+                  />
                 </div>
-                <div className="col-md-6">
-                  <div className="img-wrapper equal-image-wrapper">
-                    <Image
-                      src="/images/ecommerce3.webp"
-                      className="img-fluid equal-image"
-                      alt="E-commerce Platform"
-                      width={400}
-                      height={300}
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
+
+                <div className="col-md-6 mt-3">
+                  <Image
+                    src="/images/ecommerce3.webp"
+                    alt="E-commerce Platform"
+                    width={400}
+                    height={300}
+                    style={{
+                      width: '100%',
+                      height: '200px',
+                      objectFit: 'cover',
+                      borderRadius: '12px'
+                    }}
+                  />
                 </div>
               </div>
+
 
               <h4 className="heading-3 mb-25">E- Commerce Services</h4>
 
@@ -101,7 +116,7 @@ const Ecommerce = () => {
 
               <div className="service-divider"></div>
             </div>
-            
+
             <div className="col-md-4">
               <div className="service">
                 <h4 className="heading-3">Services</h4>
@@ -178,7 +193,7 @@ const Ecommerce = () => {
           </div>
         </div>
       </section>
-      
+
       <style jsx>{`
         /* Equal Image Wrapper Styles */
         .equal-image-wrapper {

@@ -1470,8 +1470,8 @@ const JobData = () => {
                       fontSize: '0.95rem',
                       minWidth: '200px',
                       marginLeft:"auto",
-                      marginRight:"auto"
-                      
+                      marginRight:"auto",
+                      marginTop: "15px"
                     }}
                     onClick={() => setShowForm(true)}
                   >

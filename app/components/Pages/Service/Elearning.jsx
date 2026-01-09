@@ -1,6 +1,5 @@
 'use client';
 
-
 import Image from "next/image";
 import React from "react";
 import Link from "next/link";
@@ -10,28 +9,32 @@ const Elearning = () => {
   return (
     <div>
       <Helmet>
-        <title>E-Learning Solutions - EXCERPT TECHNOLOGIES PRIVATE LIMITED</title>
+        <title>
+          E-Learning Solutions - EXCERPT TECHNOLOGIES PRIVATE LIMITED - Software As A Service Provider | Best Software Solution Provider
+        </title>
         <meta
           name="description"
-          content="Explore our E-Learning solutions to enhance your educational offerings."
+          content="Excerpt Technologies Private Limited offers comprehensive E-Learning solutions to help educational institutions and businesses deliver effective online education."
         />
       </Helmet>
-      
+
       <section
         style={{
           backgroundImage: "url(/images/banners1se1.webp)",
           backgroundColor: "rgb(255, 255, 255)",
+          backgroundSize: "cover",
+          backgroundPosition: "center center",
+          backgroundRepeat: "no-repeat",
+            minHeight: "200px",
+          display: "flex",
+          alignItems: "center",
+          overflow: "hidden"
         }}
         className="sub-header position-relative"
       >
         <div className="container">
           <div className="page-info">
-            <h2
-              className="heading-2"
-              style={{ color: "white", textAlign: "center" }}
-            >
-              E-Learning Solutions
-            </h2>
+            <h2 className="heading-2" style={{ color: "white", textAlign: "center" }}>E-Learning Solutions</h2>
             <h6 className="heading-6">
               <Link href="/">Home</Link> / <span>E-Learning</span>
             </h6>
@@ -43,50 +46,61 @@ const Elearning = () => {
         <div className="container">
           <div className="row g-4">
             <div className="col-md-8 mb-40">
-              <div className="img-wrapper mb-25 equal-image-wrapper" style={{ height: '400px' }}>
-                <Image 
-                  src="/service/el12.webp" 
-                  className="img-fluid equal-image" 
+              <div className="img-wrapper mb-25 equal-image-wrapper" style={{ height: 'auto', minHeight: 'unset' }}>
+                <Image
+                  src="/service/el12.webp"
+                  className="img-fluid equal-image"
                   alt="E-Learning Solutions"
-                  width={800}
-                  height={400}
+                  width={400}
+                  height={300}
                   loading="lazy"
                   decoding="async"
+                  style={{
+                    width: '90%',
+                    height: '200px',
+                    display: 'block',
+                    marginLeft: 'auto',
+                    marginRight: 'auto',
+                    borderRadius: '12px'
+                  }}
                 />
               </div>
 
-              <h4 className="heading-4 mb-25">E-Learning</h4>
+              <h4 className="heading-4 mb-25">E-Learning Solutions</h4>
 
               <div className="paragraph mb-40">
                 An E-Learning Website is a digital platform designed to deliver educational content and online courses to learners anywhere, anytime. It includes interactive lessons, multimedia content, quizzes, and progress tracking, helping institutions and businesses provide engaging learning experiences and monitor performance effectively. Such platforms enhance knowledge retention and streamline online education.
               </div>
 
-              <div className="row g-4 mb-25">
-                <div className="col-md-6">
-                  <div className="img-wrapper equal-image-wrapper">
-                    <Image
-                      src="/service/el11.webp"
-                      className="img-fluid equal-image"
-                      alt="E-Learning Features"
-                      width={400}
-                      height={300}
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
+              <div className="row g-1 mb-25">
+                <div className="col-md-6 mt-3">
+                  <Image
+                    src="/service/el11.webp"
+                    alt="E-Learning Features"
+                    width={400}
+                    height={300}
+                    style={{
+                      width: '100%',
+                      height: '200px',
+                      objectFit: 'cover',
+                      borderRadius: '12px'
+                    }}
+                  />
                 </div>
-                <div className="col-md-6">
-                  <div className="img-wrapper equal-image-wrapper">
-                    <Image
-                      src="/service/el13.webp"
-                      className="img-fluid equal-image"
-                      alt="E-Learning Platform"
-                      width={400}
-                      height={300}
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
+
+                <div className="col-md-6 mt-3">
+                  <Image
+                    src="/service/el13.webp"
+                    alt="E-Learning Platform"
+                    width={400}
+                    height={300}
+                    style={{
+                      width: '100%',
+                      height: '200px',
+                      objectFit: 'cover',
+                      borderRadius: '12px'
+                    }}
+                  />
                 </div>
               </div>
 
@@ -102,7 +116,7 @@ const Elearning = () => {
 
               <div className="service-divider"></div>
             </div>
-            
+
             <div className="col-md-4">
               <div className="service">
                 <h4 className="heading-3">Services</h4>
@@ -173,15 +187,13 @@ const Elearning = () => {
                 </ul>
               </div>
               <div className="squre-banner">
-                <h2 className="heading-3">
-                  Learn anywhere, anytime with our E-Learning solutions
-                </h2>
+                <h2 className="heading-3">Learn anywhere, anytime with our E-Learning solutions</h2>
               </div>
             </div>
           </div>
         </div>
       </section>
-      
+
       <style jsx>{`
         /* Equal Image Wrapper Styles */
         .equal-image-wrapper {

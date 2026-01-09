@@ -492,7 +492,8 @@ progress {
     }
     .col-md-6 {
         flex: 0 0 auto;
-        width: 50%
+        width: 40%;
+        margin-bottom: 20px;
     }
     .col-md-8 {
         flex: 0 0 auto;

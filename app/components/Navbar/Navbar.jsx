@@ -8,7 +8,7 @@ import { TiStar } from "react-icons/ti";
 import { FaPhoneAlt } from "react-icons/fa";
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 import Image from "next/image";
-const Navbar = ({ isLoggedIn = false, isAdmin = false, onLogout = () => {} }) => {
+const Navbar = ({ isLoggedIn = false, isAdmin = false, onLogout = () => { } }) => {
   const pathname = usePathname(); // NEXTJS: Use pathname for active link detection
   const [isScrolled, setIsScrolled] = useState(false);
   const [showLogoutToast, setShowLogoutToast] = useState(false);
@@ -156,17 +156,17 @@ const Navbar = ({ isLoggedIn = false, isAdmin = false, onLogout = () => {} }) =>
       `}</style>
 
       {/* Top Header Section - Always render to prevent layout shift */}
-      <section id="topheader" style={{ minHeight: '40px', height: '50px', position: 'relative', overflow: 'hidden',display: isScrolled ? 'none' : 'block' }}>
-        <div 
-          className="nav-content" 
-          style={{ 
+      <section id="topheader" style={{ minHeight: '40px', height: '50px', position: 'relative', overflow: 'hidden', display: isScrolled ? 'none' : 'block' }}>
+        <div
+          className="nav-content"
+          style={{
             marginLeft: "400px",
             visibility: isScrolled ? 'hidden' : 'visible',
             opacity: isScrolled ? 0 : 1
           }}
         >
           <div className="paragraph notification" style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "10px 100px" }}>
-            <span style={{ display: "flex", gap: "30px", alignItems: "center" ,marginTop:"10px",fontSize:"1rem"}}>
+            <span style={{ display: "flex", gap: "30px", alignItems: "center", marginTop: "10px", fontSize: "1rem" }}>
               <a href="mailto:info@excerptech.com" style={{ display: "flex", alignItems: "center", gap: "5px" }}>
                 <i className="fa-solid fa-envelope"></i>
                 <b>info@excerptech.com</b>
@@ -177,7 +177,7 @@ const Navbar = ({ isLoggedIn = false, isAdmin = false, onLogout = () => {} }) =>
                 style={{ display: "flex", alignItems: "center", gap: "5px" }}
               >
                 <i className="fa-solid fa-phone"></i>
-                <span style={{color:"white"}}>+91 63646 57660</span>
+                <span style={{ color: "white" }}>+91 63646 57660</span>
               </a>
             </span>
             <span>
@@ -186,7 +186,7 @@ const Navbar = ({ isLoggedIn = false, isAdmin = false, onLogout = () => {} }) =>
                   <i className="fa-solid fa-sign-out"></i> Logout
                 </a>
               ) : (
-                <Link href="/login" className="user-account" style={{ display: "flex", alignItems: "center", gap: "5px", textDecoration: "none", color: "white" ,fontWeight:"bold"}}>
+                <Link href="/login" className="user-account" style={{ display: "flex", alignItems: "center", gap: "5px", textDecoration: "none", color: "white", fontWeight: "bold" }}>
                   <i className="fa-solid fa-user-tie"></i> Login / Register
                 </Link>
               )}
@@ -201,23 +201,33 @@ const Navbar = ({ isLoggedIn = false, isAdmin = false, onLogout = () => {} }) =>
           className={`nav-wrapper `}
           style={{ height: "80px", minHeight: "80px" }}
         >
-          <div style={{marginLeft:"10px"}} className="d-flex align-items-center">
+          <div style={{ marginLeft: "10px" }} className="d-flex align-items-center">
             {/* CLS FIX: Logo wrapper always reserves max height (105px) to prevent layout shift */}
-            <div className={`logo-wrapper`} style={{ minHeight: '105px', height: '105px' }}>
-              <div className="logo" style={{ marginTop: "-9px", minHeight: '105px', height: '105px', display: 'flex', alignItems: 'center' }}>
+            <div className="logo-wrapper" style={{ minHeight: '105px', height: '105px' }}>
+              <div
+                className="logo"
+                style={{
+                  marginTop: "-9px",
+                  minHeight: '105px',
+                  height: '105px',
+                  display: 'flex',
+                  alignItems: 'center'
+                }}
+              >
                 <Link href="/" style={{ zIndex: 100000 }}>
-                  {/* CLS FIX: Use transform scale instead of changing height/width to prevent layout shift */}
                   <Image
                     className={`logo-img ${isScrolled ? "scrolled" : ""}`}
                     src={isScrolled ? blackLogo : whiteLogo}
                     width={190}
                     height={80}
                     style={{
-                      height: '100px', /* Always max height */
-                      width: '200px', /* Always max width */
+                      height: '100px',
+                      width: '200px',
                       objectFit: 'contain',
                       display: 'block',
-                      transform: isScrolled ? 'scale(0.67) translateX(15px)' : 'scale(1)', /* CLS FIX: Use transform instead of size changes */
+                      transform: isScrolled
+                        ? 'scale(0.67) translateX(15px)'
+                        : 'scale(1)',
                       transformOrigin: 'left center',
                       transition: 'transform 0.3s ease'
                     }}
@@ -226,13 +236,14 @@ const Navbar = ({ isLoggedIn = false, isAdmin = false, onLogout = () => {} }) =>
                 </Link>
               </div>
             </div>
+
             <div
               className={`nav-content `}
               style={{ marginLeft: "-85px" }}
             >
               <div className="clip-path"></div>
-              <div style={{marginBottom:"20px"}} className="white__background"></div>
-              <nav style={{marginBottom:"20px"}}>
+              <div style={{ marginBottom: "20px" }} className="white__background"></div>
+              <nav style={{ marginBottom: "20px" }}>
                 <div className="clip-border">
                   <div className="options">
                     <div
@@ -357,8 +368,8 @@ const Navbar = ({ isLoggedIn = false, isAdmin = false, onLogout = () => {} }) =>
                         <li className="menu">
                           <Link href="/contact" className={pathname === "/contact" ? "active-link" : ""}>CONTACT</Link>
                         </li>
-                        <li className="menu" style={{marginBottom:"10px"}}>
-                          <Link href="/careers" className={pathname === "/careers" ? "active-link" : ""} style={{ color: "blue",marginTop:"-5rem" }}>
+                        <li className="menu" style={{ marginBottom: "10px" }}>
+                          <Link href="/careers" className={pathname === "/careers" ? "active-link" : ""} style={{ color: "blue", marginTop: "-5rem" }}>
                             CAREERS <TiStar className="star blink star-button ml-5" />
                           </Link>
                         </li>

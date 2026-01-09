@@ -4787,6 +4787,8 @@ ul li {
   /* Container always reserves 105px height, image can be smaller inside */
 }
 
+
+
 .dropdown__menu.submenu {
   z-index: 1001;
 }
@@ -7522,4 +7524,12 @@ body {
     to {
         transform: translateX(70%);
     }
+}
+
+
+/* Hide logo only on mobile */
+@media (max-width: 767px) {
+  .logo-wrapper {
+    display: none !important;
+  }
 }
