@@ -1,3 +1,483 @@
+
+
+// import React, { useState, useEffect } from "react";
+
+// const JobData = () => {
+//   const [jobData, setJobData] = useState([]);
+//   const [loading, setLoading] = useState(true);
+//   const [error, setError] = useState(null);
+//   const [showForm, setShowForm] = useState(false);
+//   const [job, setJob] = useState("");
+//   const [name, setName] = useState("");
+//   const [email, setEmail] = useState("");
+//   const [resume, setResume] = useState(null);
+//   const [toast, setToast] = useState({ show: false, message: "", type: "" });
+
+//   // Fetch job data from API
+//   useEffect(() => {
+//     console.log("Starting fetch...");
+    
+//     fetch("/api/jobdata")
+//       .then(async (res) => {
+//         console.log("Response received:", res.status);
+//         const text = await res.text();
+//         console.log("Response body:", text);
+        
+//         if (!res.ok) {
+//           throw new Error(`HTTP ${res.status}: ${text}`);
+//         }
+        
+//         return JSON.parse(text);
+//       })
+//       .then(data => {
+//         console.log("Data parsed:", data);
+//         setJobData(data);
+//         setLoading(false);
+//       })
+//       .catch(err => {
+//         console.error("Full error:", err);
+//         setError(err.message);
+//         setLoading(false);
+//       });
+//   }, []);
+
+//   // Effect to auto-close toast after 3 seconds
+//   useEffect(() => {
+//     let timer;
+//     if (toast.show) {
+//       timer = setTimeout(() => {
+//         setToast({ show: false, message: "", type: "" });
+//       }, 3000);
+//     }
+//     return () => clearTimeout(timer);
+//   }, [toast.show]);
+
+//   const handleFileChange = (selectedFile) => {
+//     if (selectedFile) {
+//       const allowedFileTypes = [
+//         "application/pdf",
+//         "application/msword",
+//         "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+//       ];
+//       if (!allowedFileTypes.includes(selectedFile.type)) {
+//         setToast({
+//           show: true,
+//           message: "Invalid file type. Please upload a PDF, Word, or DOC file.",
+//           type: "error"
+//         });
+//         setResume(null);
+//         return;
+//       }
+
+//       const maxSizeInBytes = 5 * 1024 * 1024; // 5 MB
+//       if (selectedFile.size > maxSizeInBytes) {
+//         setToast({
+//           show: true,
+//           message: "File size exceeds the limit (5 MB). Please upload a smaller file.",
+//           type: "error"
+//         });
+//         setResume(null);
+//         return;
+//       }
+
+//       setResume(selectedFile);
+//     }
+//   };
+
+//   const handleSubmit = (event) => {
+//     event.preventDefault();
+
+//     const formData = new FormData();
+//     formData.append("job", job);
+//     formData.append("name", name);
+//     formData.append("email", email);
+//     formData.append("resume", resume);
+
+//     fetch("/api/submit", {
+//       method: "POST",
+//       body: formData,
+//     })
+//       .then((response) => response.text())
+//       .then((result) => {
+//         console.log(result);
+//         setToast({
+//           show: true,
+//           message: "Resume uploaded successfully!",
+//           type: "success"
+//         });
+        
+//         setJob("");
+//         setName("");
+//         setEmail("");
+//         setResume(null);
+        
+//         setTimeout(() => {
+//           setShowForm(false);
+//         }, 1500);
+//       })
+//       .catch((error) => {
+//         console.error("Error uploading resume:", error);
+//         setToast({
+//           show: true,
+//           message: "Error uploading resume. Please try again.",
+//           type: "error"
+//         });
+//       });
+//   };
+
+//   // Loading state
+//   if (loading) {
+//     return (
+//       <div className="min-vh-100 d-flex align-items-center justify-content-center">
+//         <div className="text-center">
+//           <div className="spinner-border text-primary" role="status" style={{ width: '3rem', height: '3rem' }}>
+//             <span className="visually-hidden">Loading...</span>
+//           </div>
+//           <p className="mt-3 text-muted">Loading job opportunities...</p>
+//         </div>
+//       </div>
+//     );
+//   }
+
+//   // Error state
+//   if (error) {
+//     return (
+//       <div className="min-vh-100 d-flex align-items-center justify-content-center">
+//         <div className="text-center">
+//           <i className="fas fa-exclamation-circle text-danger" style={{ fontSize: '3rem' }}></i>
+//           <h4 className="mt-3 text-danger">Error Loading Jobs</h4>
+//           <p className="text-muted">{error}</p>
+//           <button 
+//             className="btn btn-primary mt-3"
+//             onClick={() => window.location.reload()}
+//           >
+//             Retry
+//           </button>
+//         </div>
+//       </div>
+//     );
+//   }
+
+//   return (
+//     <div className="min-vh-100">
+//       {/* Toast Notification */}
+//       {toast.show && (
+//         <div 
+//           className={`position-fixed ${toast.type === "success" ? "alert-success" : "alert-danger"} alert`}
+//           style={{
+//             top: "20px",
+//             right: "20px",
+//             zIndex: 9999,
+//             minWidth: "300px"
+//           }}
+//         >
+//           <div className="d-flex justify-content-between align-items-center">
+//             <span>{toast.message}</span>
+//             <button 
+//               type="button"
+//               className="btn-close"
+//               onClick={() => setToast({ show: false, message: "", type: "" })}
+//             ></button>
+//           </div>
+//         </div>
+//       )}
+
+//       <div className="container" style={{ paddingTop: '50px', paddingBottom: '50px' }}>
+//         <div className="row g-4">
+//           {/* Hero Card - Get Your Dream Job */}
+//           <div className="col-lg-4 col-md-6">
+//             <div className="card h-100 d-flex flex-column" style={{
+//               border: 'none',
+//               borderRadius: '15px',
+//               overflow: 'hidden',
+//               boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'
+//             }}>
+//               <div style={{
+//                 background: '#007bff',
+//                 color: 'white',
+//                 padding: '20px',
+//                 textAlign: 'center'
+//               }}>
+//                 <h4 style={{ margin: 0, fontWeight: 'bold', fontSize: '1.25rem' }}>Get Your Dream Job</h4>
+//               </div>
+              
+//               <div className="card-body d-flex flex-column" style={{ padding: '25px', flex: '1' }}>
+//                 <div style={{ flex: '1' }}>
+//                   <h5 style={{ 
+//                     color: '#007bff', 
+//                     fontWeight: 'bold', 
+//                     marginBottom: '15px',
+//                     fontSize: '1.5rem'
+//                   }}>
+//                     YOUR CAREERS
+//                   </h5>
+//                   <p style={{ 
+//                     color: '#6c757d', 
+//                     marginBottom: '20px',
+//                     lineHeight: '1.6',
+//                     fontSize: '0.95rem'
+//                   }}>
+//                     Take a journey of growth and excellence by joining <strong>Excerpt Technologies.</strong> 
+//                     Being a top tech firm, we are constantly searching for driven and skilled people. 
+//                     Using creativity to communicate our vision.
+//                   </p>
+//                 </div>
+                
+//                 <div style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
+//                   <button 
+//                     className="btn"
+//                     style={{
+//                       backgroundColor: '#007bff',
+//                       color: 'white',
+//                       border: 'none',
+//                       borderRadius: '25px',
+//                       padding: '10px 30px',
+//                       fontWeight: '600',
+//                       fontSize: '0.95rem',
+//                       minWidth: '200px',
+//                       marginLeft:"auto",
+//                       marginRight:"auto",
+//                       marginTop: "15px"
+//                     }}
+//                     onClick={() => setShowForm(true)}
+//                   >
+//                     <i className="fas fa-paper-plane me-2"></i>Apply Now
+//                   </button>
+//                 </div>
+//               </div>
+//             </div>
+//           </div>
+
+//           {/* Job Cards */}
+//           {jobData.map((jobItem, index) => (
+//             <div className="col-lg-4 col-md-6" key={jobItem._id || index}>
+//               <div className="card h-100 d-flex flex-column" style={{
+//                 border: jobItem.isDefault ? '2px solid #007bff' : 'none',
+//                 borderRadius: '15px',
+//                 overflow: 'hidden',
+//                 boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'
+//               }}>
+//                 <div style={{
+//                   background: '#007bff',
+//                   color: 'white',
+//                   padding: '20px'
+//                 }}>
+//                   <h4 style={{ margin: 0, fontWeight: 'bold', fontSize: '1.25rem' }}>{jobItem.title}</h4>
+//                 </div>
+                
+//                 <div className="card-body d-flex flex-column" style={{ padding: '20px', flex: '1' }}>
+//                   <div style={{ flex: '1' }}>
+//                     {!jobItem.isDefault && (
+//                       <>
+//                         <div style={{ marginBottom: '20px' }}>
+//                           <div style={{ display: 'flex', alignItems: 'center', marginBottom: '10px' }}>
+//                             <i className="fas fa-briefcase" style={{ color: '#007bff', marginRight: '10px', fontSize: '1rem', width: '20px' }}></i>
+//                             <span style={{ fontWeight: '600', marginRight: '8px' }}>Experience:</span>
+//                             <span style={{ color: '#6c757d' }}>{jobItem.experience}</span>
+//                           </div>
+//                           <div style={{ display: 'flex', alignItems: 'center' }}>
+//                             <i className="fas fa-graduation-cap" style={{ color: '#007bff', marginRight: '10px', fontSize: '1rem', width: '20px' }}></i>
+//                             <span style={{ fontWeight: '600', marginRight: '8px' }}>Qualification:</span>
+//                             <span style={{ color: '#6c757d', fontSize: "15px" }}>{jobItem.qualification}</span>
+//                           </div>
+//                         </div>
+
+//                         {jobItem.skills && jobItem.skills.length > 0 && (
+//                           <div style={{ marginBottom: '20px' }}>
+//                             <h6 style={{ fontWeight: '600', marginBottom: '10px', fontSize: '1rem' }}>Required Skills:</h6>
+//                             <div style={{ 
+//                               // display: 'flex', 
+//                               // flexWrap: 'wrap', 
+//                               // gap: '8px',
+//                               // maxHeight: '100px',
+//                               // overflowY: 'auto',
+//                               marginLeft: '-7px',
+
+    
+//                             }}>
+//                               {jobItem.skills.map((skill, skillIndex) => (
+//                                 <span 
+//                                   key={skillIndex}
+//                                   className="mr-5"
+//                                   style={{
+//                                     color: '#007bff',
+//                                     border: '1px solid #007bff',
+//                                     backgroundColor: 'white',
+//                                     borderRadius: '20px',
+//                                     padding: '5px 12px',
+//                                     fontSize: '0.875rem',
+//                                     fontWeight: '500',
+//                                     display: 'inline-block',
+//                                     whiteSpace: 'nowrap',
+//                                     height: 'fit-content',
+//                                     width:"fit-content",
+//                                     overflow:"scroll"
+//                                   }}
+//                                 >
+//                                   {skill}
+//                                 </span>
+//                               ))}
+//                             </div>
+//                           </div>
+//                         )}
+//                       </>
+//                     )}
+
+//                     <div style={{ marginBottom: '20px' }}>
+//                       <h6 style={{ fontWeight: '600', marginBottom: '10px', fontSize: '1rem' }}>Description:</h6>
+//                       <p style={{ 
+//                         color: '#6c757d', 
+//                         fontSize: '0.9rem', 
+//                         lineHeight: '1.6', 
+//                         margin: 0,
+//                         maxHeight: '150px',
+//                         overflowY: 'auto',
+            
+//                       }}>
+//                         {jobItem.description}
+//                       </p>
+//                     </div>
+//                   </div>
+
+//                   <div style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
+//                     <button 
+//                       className="btn"
+//                       style={{
+//                         color: '#007bff',
+//                         border: '1px solid #007bff',
+//                         backgroundColor: 'white',
+//                         borderRadius: '25px',
+//                         padding: '10px 30px',
+//                         fontWeight: '600',
+//                         fontSize: '0.95rem',
+//                         transition: 'all 0.3s ease',
+//                         marginTop: '15px',
+//                         minWidth: '250px',
+//                         marginLeft:"auto",
+//                         marginRight:"auto"
+
+//                       }}
+//                       onClick={() => setShowForm(true)}
+//                       onMouseEnter={(e) => {
+//                         e.target.style.backgroundColor = '#007bff';
+//                         e.target.style.color = 'white';
+//                       }}
+//                       onMouseLeave={(e) => {
+//                         e.target.style.backgroundColor = 'white';
+//                         e.target.style.color = '#007bff';
+//                       }}
+//                     >
+//                       <i className="fas fa-paper-plane me-2"></i>Apply for this position
+//                     </button>
+//                   </div>
+//                 </div>
+//               </div>
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+
+//       {/* Application Form Modal */}
+//       {showForm && (
+//         <div className="modal fade show d-block" style={{backgroundColor: 'rgba(0,0,0,0.5)'}}>
+//           <div className="modal-dialog modal-lg modal-dialog-centered">
+//             <div className="modal-content rounded-4 border-0 shadow-lg">
+//               <div className="modal-header border-0 pb-0">
+//                 <h4 className="modal-title text-primary fw-bold">Submit Your Application</h4>
+//                 <button
+//                   type="button"
+//                   className="btn-close"
+//                   onClick={() => setShowForm(false)}
+//                 ></button>
+//               </div>
+              
+//               <div className="modal-body p-4">
+//                 <div>
+//                   <div className="row">
+//                     <div className="col-md-6 mb-3">
+//                       <label className="form-label fw-semibold">Job Title</label>
+//                       <input
+//                         type="text"
+//                         className="form-control form-control-lg rounded-pill"
+//                         placeholder="Enter job title"
+//                         value={job}
+//                         onChange={(e) => setJob(e.target.value)}
+//                         required
+//                       />
+//                     </div>
+                    
+//                     <div className="col-md-6 mb-3">
+//                       <label className="form-label fw-semibold">Full Name</label>
+//                       <input
+//                         type="text"
+//                         className="form-control form-control-lg rounded-pill"
+//                         placeholder="Enter your full name"
+//                         value={name}
+//                         onChange={(e) => setName(e.target.value)}
+//                         required
+//                       />
+//                     </div>
+//                   </div>
+
+//                   <div className="mb-3">
+//                     <label className="form-label fw-semibold">Email Address</label>
+//                     <input
+//                       type="email"
+//                       className="form-control form-control-lg rounded-pill"
+//                       placeholder="Enter your email address"
+//                       value={email}
+//                       onChange={(e) => setEmail(e.target.value)}
+//                       required
+//                     />
+//                   </div>
+
+//                   <div className="mb-4">
+//                     <label className="form-label fw-semibold">Upload Resume</label>
+//                     <input
+//                       type="file"
+//                       className="form-control form-control-lg"
+//                       accept=".pdf,.doc,.docx"
+//                       onChange={(e) => handleFileChange(e.target.files[0])}
+//                       required
+//                     />
+//                     <div className="form-text">Accepted formats: PDF, DOC, DOCX (Max size: 5MB)</div>
+//                   </div>
+
+//                   <div className="d-flex gap-3 justify-content-end">
+//                     <button
+//                       type="button"
+//                       className="btn btn-outline-secondary px-4 rounded-pill"
+//                       onClick={() => setShowForm(false)}
+//                     >
+//                       Cancel
+//                     </button>
+//                     <button
+//                       type="button"
+//                       className="btn btn-primary px-5 rounded-pill"
+//                       onClick={handleSubmit}
+//                     >
+//                       <i className="fas fa-paper-plane me-2"></i>Submit Application
+//                     </button>
+//                   </div>
+//                 </div>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       )}
+//     </div>
+//   );
+// };
+
+// export default JobData;
+
+
+
+
+
+
+
+
 'use client';
 
 // import React, { useState, useEffect } from "react";
@@ -1465,17 +1945,24 @@ const JobData = () => {
                       color: 'white',
                       border: 'none',
                       borderRadius: '25px',
+                      marginTop:"15px",
                       padding: '10px 30px',
                       fontWeight: '600',
                       fontSize: '0.95rem',
                       minWidth: '200px',
                       marginLeft:"auto",
                       marginRight:"auto",
+<<<<<<< HEAD
                       marginTop: "15px"
+=======
+                     
+                      
+>>>>>>> 0c86f95 (new public and app files)
                     }}
                     onClick={() => setShowForm(true)}
                   >
-                    <i className="fas fa-paper-plane me-2"></i>Apply Now
+                    <i className="fas fa-paper-plane me-2 "></i>Apply Now
+                    
                   </button>
                 </div>
               </div>
@@ -1518,16 +2005,36 @@ const JobData = () => {
 
                         {jobItem.skills && jobItem.skills.length > 0 && (
                           <div style={{ marginBottom: '20px' }}>
-                            <h6 style={{ fontWeight: '600', marginBottom: '10px', fontSize: '1rem' }}>Required Skills:</h6>
-                            <div style={{ 
+  <h6 style={{ fontWeight: '600', marginBottom: '10px', fontSize: '1rem' }}>Required Skills:</h6>
+  <div className="d-flex flex-wrap gap-1">
+    <span 
+      className="badge bg-light rounded-pill px-3 py-2" 
+      style={{ color: 'rgb(0, 123, 255)', border: '1px solid rgb(0, 123, 255)',fontSize:'0.675rem' }}
+    >
+{jobItem.skills.join(', ')}
+    </span>
+  </div>
+  {/* rest of your code */}
+
+                            {/* <div style={{ 
                               display: 'flex', 
                               flexWrap: 'wrap', 
                               gap: '8px',
                               maxHeight: '100px',
                               overflowY: 'auto',
+<<<<<<< HEAD
     
                             }}>
                               {jobItem.skills.map((skill, skillIndex) => (
+=======
+                              marginLeft: '-7px',
+                              paddingRight:'5px',
+                              marginRight:'15px'
+                            
+    
+                            }}> */}
+                              {/* {jobItem.skills.map((skill, skillIndex) => (
+>>>>>>> 0c86f95 (new public and app files)
                                 <span 
                                   key={skillIndex}
                                   className="mr-5"
@@ -1536,7 +2043,7 @@ const JobData = () => {
                                     border: '1px solid #007bff',
                                     backgroundColor: 'white',
                                     borderRadius: '20px',
-                                    padding: '5px 12px',
+                                    padding: '6px 4px',
                                     fontSize: '0.875rem',
                                     fontWeight: '500',
                                     display: 'inline-block',
@@ -1548,9 +2055,10 @@ const JobData = () => {
                                 >
                                   {skill}
                                 </span>
-                              ))}
+                              ))} */}
+                              
                             </div>
-                          </div>
+                      
                         )}
                       </>
                     )}

@@ -36,7 +36,7 @@ function Project() {
                     <Image src="/images/home1/projects/2.webp" alt="Web Design & Development" width="400" height="300" loading="lazy" decoding="async" style={{ display: 'block' }} />
                   </div>
                   <div className="info d-flex flex-column align-items-center justify-content-center">
-                    <h6 className="heading-6" style={{ marginLeft: "70px" }}>
+                    <h6 className="heading-6 web" style={{ marginLeft: "70px" }}>
                       Web Design & Development
                     </h6>
                   </div>
@@ -157,7 +157,7 @@ function Project() {
                     <Image src="/images/home1/projects/3.webp" alt="Mobile App Development" width="400" height="300" loading="lazy" decoding="async" style={{ display: 'block' }} />
                   </div>
                   <div className="info d-flex flex-column align-items-center justify-content-center">
-                    <h6 className="heading-6" style={{ marginLeft: "70px" }}>
+                    <h6 className="heading-6 web" style={{ marginLeft: "70px" }}>
                       Mobile App Development
                     </h6>
                   </div>

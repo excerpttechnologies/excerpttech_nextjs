@@ -156,7 +156,11 @@ const Navbar = ({ isLoggedIn = false, isAdmin = false, onLogout = () => { } }) =
       `}</style>
 
       {/* Top Header Section - Always render to prevent layout shift */}
+<<<<<<< HEAD
       <section id="topheader" style={{ minHeight: '40px', height: '50px', position: 'relative', overflow: 'hidden', display: isScrolled ? 'none' : 'block' }}>
+=======
+      <section id="topheader" style={{ minHeight: '40px', height: '40px', position: 'relative', overflow: 'hidden', display: isScrolled ? 'none' : 'block' }}>
+>>>>>>> 0c86f95 (new public and app files)
         <div
           className="nav-content"
           style={{
@@ -165,8 +169,13 @@ const Navbar = ({ isLoggedIn = false, isAdmin = false, onLogout = () => { } }) =
             opacity: isScrolled ? 0 : 1
           }}
         >
+<<<<<<< HEAD
           <div className="paragraph notification" style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "10px 100px" }}>
             <span style={{ display: "flex", gap: "30px", alignItems: "center", marginTop: "10px", fontSize: "1rem" }}>
+=======
+          <div className="paragraph notification" style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "8px 90px" }}>
+            <span style={{ display: "flex", gap: "30px", alignItems: "center", marginTop: "5px", fontSize: "1rem" }}>
+>>>>>>> 0c86f95 (new public and app files)
               <a href="mailto:info@excerptech.com" style={{ display: "flex", alignItems: "center", gap: "5px" }}>
                 <i className="fa-solid fa-envelope"></i>
                 <b>info@excerptech.com</b>

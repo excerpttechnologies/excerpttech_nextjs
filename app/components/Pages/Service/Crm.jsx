@@ -443,12 +443,22 @@ const CrmSystems = () => {
     <div>
       <Helmet>
         <title>
+<<<<<<< HEAD
           CRM Systems - EXCERPT TECHNOLOGIES PRIVATE LIMITED - Software As A Service Provider | Best Software Solution Provider
         </title>
         <meta
           name="description"
           content="Excerpt Technologies Private Limited offers comprehensive CRM System solutions to manage customer relationships and drive business growth."
         />
+=======
+          CRM Systems - EXCERPT TECHNOLOGIES PRIVATE LIMITED - Software As A Service Provider | Best Software Solution Provider | CRM Software Develpment
+        </title>
+        <meta
+          name="description"
+          content="Excerpt Technologies Private Limited offers comprehensive CRM System solutions to manage customer relationships and drive business growth. CRM Software Develpment"
+        />
+      
+>>>>>>> 0c86f95 (new public and app files)
       </Helmet>
 
       <section

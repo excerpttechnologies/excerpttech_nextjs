@@ -237,7 +237,7 @@ const Uiux = () => {
         </title>
         <meta
           name="description"
-          content="Excerpt Technologies Private Limited specializes in UI/UX design, creating user-centered interfaces that enhance user experience and engagement."
+          content="Excerpt Technologies Private Limited specializes in UI/UX design, creating user-centered interfaces that enhance user experience and engagement.   UI/UX Design"
         />
       </Helmet>
 

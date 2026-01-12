@@ -1840,7 +1840,7 @@ const Slider = React.memo(() => {
   const slides = useMemo(() => [
     {
       image: '/images/home1/slider/s3.webp',
-      caption: 'A Triumphant Three Years Of Software',
+      caption: 'A Triumphant Six Years Of Software',
       useGradient: false,
     },
     {
