@@ -719,11 +719,6 @@
 
 //arvinf
 
-<<<<<<< HEAD
-'use client';
-
-import React, { useState } from 'react';
-=======
 // 'use client';
 
 // import React, { useState } from 'react';
@@ -1447,7 +1442,6 @@ import React, { useState } from 'react';
 'use client';
 
 import React, { useState, useEffect } from 'react';
->>>>>>> 0c86f95 (new public and app files)
 import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter, usePathname } from 'next/navigation';
@@ -1457,14 +1451,9 @@ import { TiStar } from "react-icons/ti";
 const MobileNav = ({ isLoggedIn, onLogout }) => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileNavOpen, setMobileNavOpen] = useState(false);
-<<<<<<< HEAD
-    const [isServicesDropdownOpen, setServicesDropdownOpen] = useState(false);
-    const [isWebDesignDropdownOpen, setWebDesignDropdownOpen] = useState(false);
-=======
     const [activeDropdown, setActiveDropdown] = useState(null); // 'services' or null
     const [activeSubDropdown, setActiveSubDropdown] = useState(null); // 'webdesign' or null
     
->>>>>>> 0c86f95 (new public and app files)
     const router = useRouter();
     const pathname = usePathname();
 
@@ -1494,49 +1483,12 @@ const MobileNav = ({ isLoggedIn, onLogout }) => {
         }
     };
 
-<<<<<<< HEAD
-    const closeAllMenus = () => {
-=======
     const closeMenu = () => {
->>>>>>> 0c86f95 (new public and app files)
         setMobileNavOpen(false);
         setActiveDropdown(null);
         setActiveSubDropdown(null);
     };
 
-<<<<<<< HEAD
-    const handleLogout = () => {
-        onLogout();
-        closeAllMenus();
-    };
-
-    const handleServicesClick = (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        setServicesDropdownOpen(!isServicesDropdownOpen);
-        if (isServicesDropdownOpen) {
-            setWebDesignDropdownOpen(false);
-        }
-    };
-
-    const handleWebDesignClick = (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        setWebDesignDropdownOpen(!isWebDesignDropdownOpen);
-    };
-
-    const handleServicesLinkNavigate = (e) => {
-        if (!e.target.closest('.dropdown-toggle')) {
-            closeAllMenus();
-            router.push('/services');
-        }
-    };
-
-    const handleWebDesignLinkNavigate = (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        handleWebDesignClick(e);
-=======
     const handleLogoutClick = () => {
         if (onLogout) onLogout();
         closeMenu();
@@ -1551,262 +1503,10 @@ const MobileNav = ({ isLoggedIn, onLogout }) => {
     const toggleSubDropdown = (name, e) => {
         e.stopPropagation();
         setActiveSubDropdown(activeSubDropdown === name ? null : name);
->>>>>>> 0c86f95 (new public and app files)
     };
 
     return (
         <>
-<<<<<<< HEAD
-            {/* Mobile Navigation - Only shows on mobile screens */}
-            <div className="mobile-nav-container">
-                <div style={{
-                    backgroundColor: "white",
-                    position: "fixed",
-                    top: 0,
-                    left: 0,
-                    right: 0,
-                    zIndex: 1000,
-                    boxShadow: "0 2px 5px rgba(0,0,0,0.1)"
-                }}>
-                    <div style={{
-                        padding: '10px 15px',
-                        background: 'white',
-                    }}>
-                        {/* Top Bar - Logo and Contact */}
-                        <div style={{
-                            display: "flex",
-                            justifyContent: "space-between",
-                            alignItems: "center",
-                            marginBottom: "10px"
-                        }}>
-                            {/* Logo - Left Side */}
-                            <div>
-                                <Link href="/" onClick={closeAllMenus}>
-                                    <img
-                                        src="/images/excerptlogo.webp"
-                                        alt="Excerpt Logo"
-                                        style={{
-                                            height: "65px",
-                                            width: "auto",
-                                            Width: "150px",
-                                            objectFit: "contain",
-                                            cursor: "pointer"
-                                        }}
-                                    />
-                                </Link>
-                            </div>
-
-                            {/* Contact Info - Right Side */}
-                            <div style={{ textAlign: "right", fontSize: "11px", lineHeight: "1.5", color: "#333" }}>
-                                <div>+91 6364657660</div>
-                                <div>info@excerptech.com</div>
-                            </div>
-                        </div>
-
-                        {/* Menu Icon */}
-                        <div
-                            style={{
-                                fontSize: '28px',
-                                cursor: 'pointer',
-                                textAlign: 'right',
-                                color: '#333'
-                            }}
-                            onClick={toggleMobileNav}
-                        >
-                            ☰
-                        </div>
-
-                        {/* Mobile Menu Dropdown */}
-                        {isMobileNavOpen && (
-                            <div
-                                style={{
-                                    position: "fixed",
-                                    top: '85px',
-                                    left: 0,
-                                    right: 0,
-                                    maxHeight: 'calc(100vh - 85px)',
-                                    overflowY: 'auto',
-                                    background: "#fff",
-                                    padding: "20px 15px",
-                                    zIndex: 999,
-                                    boxShadow: "0 4px 6px rgba(0,0,0,0.1)"
-                                }}
-                            >
-                                <ul style={{
-                                    listStyle: 'none',
-                                    padding: 0,
-                                    margin: 0,
-                                    textAlign: "left"
-                                }}>
-                                    <li style={{ marginBottom: "15px" }}>
-                                        <Link href="/" onClick={closeAllMenus} style={{ fontSize: "16px", color: "blue", fontWeight: "bold" }}>
-                                            HOME
-                                        </Link>
-                                    </li>
-
-                                    {/* SERVICES */}
-                                    <li style={{ marginBottom: "15px" }}>
-                                        <div style={{
-                                            display: 'flex',
-                                            justifyContent: 'space-between',
-                                            alignItems: 'center'
-                                        }}>
-                                            <span
-                                                onClick={handleServicesLinkNavigate}
-                                                style={{
-                                                    fontSize: "16px",
-                                                    color: "blue",
-                                                    fontWeight: "bold",
-                                                    cursor: "pointer"
-                                                }}
-                                            >
-                                                SERVICES
-                                            </span>
-                                            <span
-                                                className="dropdown-toggle"
-                                                onClick={handleServicesClick}
-                                                style={{
-                                                    cursor: "pointer",
-                                                    padding: "5px",
-                                                    color: "#333"
-                                                }}
-                                            >
-                                                {isServicesDropdownOpen ? <FaChevronDown /> : <FaChevronRight />}
-                                            </span>
-                                        </div>
-
-                                        {isServicesDropdownOpen && (
-                                            <div style={{
-                                                paddingLeft: "15px",
-                                                marginTop: "10px",
-                                                backgroundColor: "#f8f9fa",
-                                                padding: "10px",
-                                                borderRadius: "5px"
-                                            }}>
-                                                {/* Web Design */}
-                                                <div style={{
-                                                    display: 'flex',
-                                                    justifyContent: 'space-between',
-                                                    alignItems: 'center',
-                                                    marginBottom: "10px"
-                                                }}>
-                                                    <span
-                                                        onClick={handleWebDesignLinkNavigate}
-                                                        style={{
-                                                            fontSize: "14px",
-                                                            color: "#495057",
-                                                            cursor: "pointer"
-                                                        }}
-                                                    >
-                                                        Web Design & Development
-                                                    </span>
-                                                    <span
-                                                        onClick={handleWebDesignClick}
-                                                        style={{
-                                                            cursor: "pointer",
-                                                            padding: "5px",
-                                                            color: "#333"
-                                                        }}
-                                                    >
-                                                        {isWebDesignDropdownOpen ? <FaChevronDown /> : <FaChevronRight />}
-                                                    </span>
-                                                </div>
-
-                                                {isWebDesignDropdownOpen && (
-                                                    <div style={{
-                                                        paddingLeft: "15px",
-                                                        marginBottom: "10px",
-                                                        backgroundColor: "white",
-                                                        padding: "8px",
-                                                        borderRadius: "4px"
-                                                    }}>
-                                                        <Link href="/Staticwebsite" onClick={closeAllMenus} style={{ display: "block", marginBottom: "8px", fontSize: "13px", color: "blue" }}>
-                                                            Static Websites
-                                                        </Link>
-                                                        <Link href="/Dyanamicwebsite" onClick={closeAllMenus} style={{ display: "block", marginBottom: "8px", fontSize: "13px", color: "blue" }}>
-                                                            Dynamic Websites
-                                                        </Link>
-                                                        <Link href="/Customizedwebsites" onClick={closeAllMenus} style={{ display: "block", fontSize: "13px", color: "blue" }}>
-                                                            Customized Websites
-                                                        </Link>
-                                                    </div>
-                                                )}
-
-                                                {[
-                                                    { path: "/Geekychat", name: "GeekyChat (WhatsApp Bulk)" },
-                                                    { path: "/Erp", name: "ERP" },
-                                                    { path: "/Crm", name: "CRM's" },
-                                                    { path: "/Ecommerce", name: "E-commerce" },
-                                                    { path: "/Elearning", name: "E-learning" },
-                                                    { path: "/Lms", name: "LMS" },
-                                                    { path: "/DigitalMarketing", name: "Digital Marketing" },
-                                                    { path: "/Dataanalytics", name: "Data Analytics & Science" },
-                                                    { path: "/Mobileapp", name: "Mobile Application" },
-                                                    { path: "/Cybersecurity", name: "Cyber Security" },
-                                                ].map((item, i) => (
-                                                    <Link
-                                                        key={i}
-                                                        href={item.path}
-                                                        onClick={closeAllMenus}
-                                                        style={{
-                                                            display: "block",
-                                                            padding: "8px 10px",
-                                                            fontSize: "14px",
-                                                            color: "blue",
-                                                            marginBottom: "5px"
-                                                        }}
-                                                    >
-                                                        {item.name}
-                                                    </Link>
-                                                ))}
-
-                                                <a
-                                                    href="https://trainings.excerptech.com"
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                    onClick={closeAllMenus}
-                                                    style={{
-                                                        display: "block",
-                                                        padding: "8px 10px",
-                                                        fontSize: "14px",
-                                                        color: "blue"
-                                                    }}
-                                                >
-                                                    Excerpt Trainings
-                                                </a>
-                                            </div>
-                                        )}
-                                    </li>
-
-                                    <li style={{ marginBottom: "15px" }}>
-                                        <Link href="/portfolio" onClick={closeAllMenus} style={{ fontSize: "16px", color: "blue", fontWeight: "bold" }}>
-                                            PORTFOLIO
-                                        </Link>
-                                    </li>
-
-                                    <li style={{ marginBottom: "15px" }}>
-                                        <Link href="/contact" onClick={closeAllMenus} style={{ fontSize: "16px", color: "blue", fontWeight: "bold" }}>
-                                            CONTACT
-                                        </Link>
-                                    </li>
-
-                                    <li style={{ marginBottom: "15px" }}>
-                                        <Link href="/careers" onClick={closeAllMenus} style={{ fontSize: "16px", color: "blue", fontWeight: "bold" }}>
-                                            CAREERS
-                                        </Link>
-                                    </li>
-
-                                    {isLoggedIn && (
-                                        <li style={{ marginBottom: "15px" }}>
-                                            <Link href="/dashboard" onClick={closeAllMenus} style={{ fontSize: "16px", color: "#007bff", fontWeight: "bold" }}>
-                                                ADMIN
-                                            </Link>
-                                        </li>
-                                    )}
-                                </ul>
-                            </div>
-                        )}
-=======
             <style jsx global>{`
                 /* Mobile Nav Container */
                 .mobile-nav-root {
@@ -2061,25 +1761,10 @@ const MobileNav = ({ isLoggedIn, onLogout }) => {
                                 <FaBars />
                             </div>
                         </div>
->>>>>>> 0c86f95 (new public and app files)
                     </div>
                 </div>
             </div>
 
-<<<<<<< HEAD
-            {/* CSS - Hide on desktop, show only on mobile */}
-            <style jsx>{`
-                .mobile-nav-container {
-                    display: none;
-                }
-
-                @media (max-width: 768px) {
-                    .mobile-nav-container {
-                        display: block;
-                    }
-                }
-            `}</style>
-=======
             {/* OFF-CANVAS MENU */}
             <div className={`menu-backdrop ${isMobileNavOpen ? 'open' : ''}`} onClick={closeMenu}></div>
             <div className={`mobile-menu-overlay ${isMobileNavOpen ? 'open' : ''}`}>
@@ -2154,7 +1839,6 @@ const MobileNav = ({ isLoggedIn, onLogout }) => {
                     </ul>
                 </div>
             </div>
->>>>>>> 0c86f95 (new public and app files)
         </>
     );
 };

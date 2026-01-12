@@ -1952,12 +1952,8 @@ const JobData = () => {
                       minWidth: '200px',
                       marginLeft:"auto",
                       marginRight:"auto",
-<<<<<<< HEAD
-                      marginTop: "15px"
-=======
                      
                       
->>>>>>> 0c86f95 (new public and app files)
                     }}
                     onClick={() => setShowForm(true)}
                   >
@@ -2022,11 +2018,6 @@ const JobData = () => {
                               gap: '8px',
                               maxHeight: '100px',
                               overflowY: 'auto',
-<<<<<<< HEAD
-    
-                            }}>
-                              {jobItem.skills.map((skill, skillIndex) => (
-=======
                               marginLeft: '-7px',
                               paddingRight:'5px',
                               marginRight:'15px'
@@ -2034,7 +2025,6 @@ const JobData = () => {
     
                             }}> */}
                               {/* {jobItem.skills.map((skill, skillIndex) => (
->>>>>>> 0c86f95 (new public and app files)
                                 <span 
                                   key={skillIndex}
                                   className="mr-5"

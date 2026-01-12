@@ -1832,19 +1832,6 @@ const Portfolio = () => {
     id="newsletter"
     className="portfolio__newsletter"
 >
-<<<<<<< HEAD
-    <div className="container newsletter-Wrapper newsletter4Wrapper">
-        <div className="text text4Container">
-            <h3 className="heading4Title">Join to Our Team For More Info</h3>
-            <p className="para4Description">Excerpt Technologies PVT LTD</p>
-        </div>
-
-        <form
-            className="form form4Layout"
-            onSubmit={handleEmailSubmit}
-        >
-            <div className="email-wrapper email4Wrapper">
-=======
     <div style={{display:"flex",flexDirection:"column", alignItems:"center",width:"100vw"}} className="container newsletter-Wrapper newsletter4Wrapper">
         <div className="text text4Container">
             <h3 className="heading4 Title">Join to Our Team For More Info</h3>
@@ -1857,7 +1844,6 @@ const Portfolio = () => {
             onSubmit={handleEmailSubmit}
         >
             <div className="email-wrapper email4Wrapper d-flex">
->>>>>>> 0c86f95 (new public and app files)
                 <input
                     type="email"
                     name="email"
@@ -1868,16 +1854,10 @@ const Portfolio = () => {
                     required
                     className="input4Field"
                 />
-<<<<<<< HEAD
-                <button type="submit" className="subscribe-btn">
-                    <span className="subscribe-btn">Reach Us</span>
-                </button>
-=======
                 <button style={{width:"10rem",marginTop:".1rem",borderRadius:0,marginLeft:-15}} type="submit" className="subscribe-btn">
                     <span style={{color:"white"}}>Reach Us</span>
                 </button>
                 <br />
->>>>>>> 0c86f95 (new public and app files)
             </div>
         </form>
     </div>

@@ -517,11 +517,7 @@ const Seo = () => {
         <div className="container">
           <div className="row g-4">
             <div className="col-md-8 mb-40">
-<<<<<<< HEAD
-              <div className="img-wrapper mb-25 equal-image-wrapper" style={{ height: '400px' }}>
-=======
               <div className="img-wrapper mb-25 equal-image-wrapper" style={{ height: 'auto', minHeight: 'unset' }}>
->>>>>>> 0c86f95 (new public and app files)
                 <Image
                   src="/images/sr1.webp" 
                   className="img-fluid equal-image" 
@@ -552,34 +548,6 @@ const Seo = () => {
                 your objectives.
               </div>
 
-<<<<<<< HEAD
-              <div className="row g-4 mb-25">
-                <div className="col-md-6">
-                  <div className="img-wrapper equal-image-wrapper">
-                    <Image
-                      src="/images/sr2.webp"
-                      className="img-fluid equal-image"
-                      alt="SEO Services"
-                      width={400}
-                      height={300}
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                </div>
-                <div className="col-md-6">
-                  <div className="img-wrapper equal-image-wrapper">
-                    <Image 
-                      src="/images/sr3.webp" 
-                      className="img-fluid equal-image" 
-                      alt="SEO Optimization"
-                      width={400}
-                      height={300}
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-=======
               <div className="row g-1 mb-25">
                 <div className="col-md-6 mt-3">
                   <Image
@@ -612,7 +580,6 @@ const Seo = () => {
                     loading="lazy"
                     decoding="async"
                   />
->>>>>>> 0c86f95 (new public and app files)
                 </div>
               </div>
 

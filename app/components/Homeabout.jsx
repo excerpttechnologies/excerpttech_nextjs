@@ -127,8 +127,6 @@
 
 
 
-<<<<<<< HEAD
-=======
 // 'use client';
 
 // import React from "react";
@@ -529,7 +527,6 @@
 // export default Homeabout;
 
 
->>>>>>> 0c86f95 (new public and app files)
 'use client';
 
 import React from "react";
@@ -553,62 +550,17 @@ function Homeabout() {
                     margin: 0, 
                     padding: 0,
                     position: "relative",
-<<<<<<< HEAD
-                    display: "inline-block"
-                  }}
-                >
-                  <div className="tp-thumb-common-overlay"></div>
-                  <div className="image-container-main">
-                    <Image
-=======
                     display: "inline-block",
                     
                   }}
                 >
                   
                   <div className="image-container-main" >
-                    <img
->>>>>>> 0c86f95 (new public and app files)
+                    <Image
                       decoding="async"
                       loading="lazy"
                       src="/images/111.webp"
                       width={400}
-<<<<<<< HEAD
-                      height={500}
-                      alt="About us main image"
-                      style={{ 
-                        objectFit: "cover",
-                        display: "block"
-                      }}
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    />
-                  </div>
-                </div>
-                
-                {/* Secondary Image Container */}
-                <div className="tp-about-thumb-shape" style={{ margin: 0, padding: 0, marginTop: "30px" }}>
-                  <div className="tp-about-thumb-shape-one">
-                    <div className="about-image-1 overlay-anim tp-thumb-common fix">
-                      <div className="tp-thumb-common-overlay"></div>
-                      <div className="image-container-secondary">
-                        <Image
-                          decoding="async"
-                          loading="lazy"
-                          src="/images/ab2.webp"
-                          width={400}
-                          height={400}
-                          alt="About us secondary image"
-                          style={{ 
-                            objectFit: "cover",
-                            display: "block"
-                          }}
-                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-=======
                       height={600}
                       className="img-about"
                       alt="About us main image"
@@ -630,7 +582,7 @@ function Homeabout() {
                     <div className="about-image-1 overlay-anim tp-thumb-common fix">
                       <div className="tp-thumb-common-overlay"></div>
                       <div className="image-container-secondary">
-                        <img
+                        <Image
                           decoding="async"
                           loading="lazy"
                           src="/images/ab2.webp"
@@ -649,7 +601,6 @@ function Homeabout() {
                     </div>
                   </div>
                 </div>
->>>>>>> 0c86f95 (new public and app files)
               </div>
             </div>
             

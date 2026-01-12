@@ -210,11 +210,7 @@ const ErpSystems = () => {
     <div>
       <Helmet>
         <title>
-<<<<<<< HEAD
-          ERP Systems - EXCERPT TECHNOLOGIES PRIVATE LIMITED - Software As A Service Provider | Best Software Solution Provider
-=======
           ERP Systems - EXCERPT TECHNOLOGIES PRIVATE LIMITED - Software As A Service Provider | Best Software Solution Provider |     ERP Systems
->>>>>>> 0c86f95 (new public and app files)
         </title>
         <meta
           name="description"

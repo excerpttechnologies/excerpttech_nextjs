@@ -291,11 +291,7 @@ const Webdesign = () => {
         <div className="container">
           <div className="row g-4">
             <div className="col-md-8 mb-40">
-<<<<<<< HEAD
-              <div className="img-wrapper mb-25 equal-image-wrapper" style={{ height: '400px' }}>
-=======
               <div className="img-wrapper mb-25 equal-image-wrapper" style={{ height: 'auto', minHeight: 'unset' }}>
->>>>>>> 0c86f95 (new public and app files)
                 <Image
                   src="/images/web1.webp" 
                   className="img-fluid equal-image" 
@@ -321,34 +317,6 @@ const Webdesign = () => {
                 Web Design and Development involves creating and building visually appealing, functional websites tailored to meet business needs. Our expert team combines creativity with technical expertise to deliver responsive, user-friendly websites that enhance your online presence and drive business growth.
               </div>
 
-<<<<<<< HEAD
-              <div className="row g-4 mb-25">
-                <div className="col-md-6">
-                  <div className="img-wrapper equal-image-wrapper">
-                    <Image
-                      src="/images/web2.webp"
-                      className="img-fluid equal-image"
-                      alt="Web Design Features"
-                      width={400}
-                      height={300}
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                </div>
-                <div className="col-md-6">
-                  <div className="img-wrapper equal-image-wrapper">
-                    <Image
-                      src="/images/web3.webp" 
-                      className="img-fluid equal-image" 
-                      alt="Web Development Solutions"
-                      width={400}
-                      height={300}
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-=======
               <div className="row g-1 mb-25">
                 <div className="col-md-6 mt-3">
                   <Image
@@ -381,7 +349,6 @@ const Webdesign = () => {
                     loading="lazy"
                     decoding="async"
                   />
->>>>>>> 0c86f95 (new public and app files)
                 </div>
               </div>
               

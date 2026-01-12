@@ -114,8 +114,6 @@ export default function RootLayout({
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
       </head>
       <body cz-shortcut-listen="true">
-<<<<<<< HEAD
-=======
          <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-PHNJPF3ZGK"
           strategy="afterInteractive"
@@ -129,7 +127,6 @@ export default function RootLayout({
             gtag('config', 'G-PHNJPF3ZGK');
           `}
         </Script>
->>>>>>> 0c86f95 (new public and app files)
         <Providers>
           {children}
         </Providers>

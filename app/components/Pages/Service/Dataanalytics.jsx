@@ -229,15 +229,10 @@ const Dataanalytics = () => {
         <title>
           Data Analytics - EXCERPT TECHNOLOGIES PRIVATE LIMITED - Software As A Service Provider | Best Software Solution Provider
         </title>
-        <meta
-          name="description"
-          content="Excerpt Technologies Private Limited offers expert Data Analytics and Power BI services, transforming your business data into actionable insights for informed decision-making."
-<<<<<<< HEAD
-        />
-=======
-      
-       />
->>>>>>> 0c86f95 (new public and app files)
+      <meta
+  name="description"
+  content="Excerpt Technologies Private Limited offers expert Data Analytics and Power BI services, transforming your business data into actionable insights for informed decision-making."
+/>
       </Helmet>
 
       <section
