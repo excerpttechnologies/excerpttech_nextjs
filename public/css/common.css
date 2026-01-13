@@ -127,7 +127,7 @@ a {
    
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.625;
     color: #9297a0;
     
@@ -172,7 +172,7 @@ a {
         line-height: 28px;
     }
     .paragraph {
-        font-size: 16px;
+        font-size: 14px !important;
         line-height: 26px;
     }
     .paragraph-3 {
@@ -7593,9 +7593,6 @@ body {
 #topheader{
     display: none !important;
 }
-<<<<<<< HEAD
-
-=======
 #navbar-1{
     display: none !important;
 }
@@ -7634,15 +7631,11 @@ body {
 .web{
     margin-left: 0px !important;
 }
->>>>>>> 0c86f95 (new public and app files)
 
 }
 
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 0c86f95 (new public and app files)
 @media (max-width: 450px) {
   
 .content{
@@ -7717,12 +7710,18 @@ body {
 }
 
 
-<<<<<<< HEAD
-=======
 @media (max-width: 500px) {
 .tp-about-thumb{
      height: 50vh !important;
     
 }
 }
->>>>>>> 0c86f95 (new public and app files)
+@media (max-width: 767px) {
+  html, body {
+    overflow-y: auto !important;
+    height: auto !important;
+  }
+}
+
+
+
