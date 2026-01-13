@@ -594,7 +594,7 @@ const Navbar = ({ isLoggedIn = false, isAdmin = false, onLogout = () => { } }) =
       `}</style>
 
       {/* Top Header Section - Always render to prevent layout shift */}
-      <section id="topheader" style={{ minHeight: '40px', height: '40px', position: 'relative', overflow: 'hidden', display: isScrolled ? 'none' : 'block' }}>
+      <section id="topheader" style={{ minHeight: '30px', height: '40px', position: 'relative', overflow: 'hidden', display: isScrolled ? 'none' : 'block' }}>
         <div
           className="nav-content"
           style={{
@@ -637,11 +637,11 @@ const Navbar = ({ isLoggedIn = false, isAdmin = false, onLogout = () => { } }) =
       <section id="navbar-1">
         <div
           className={`nav-wrapper `}
-          style={{ height: "80px", minHeight: "80px" }}
+          style={{ height: "70px", minHeight: "70px" }}
         >
           <div style={{ marginLeft: "10px" }} className="d-flex align-items-center">
             {/* CLS FIX: Logo wrapper always reserves max height (105px) to prevent layout shift */}
-            <div className="logo-wrapper" style={{ minHeight: '105px', height: '105px' }}>
+            <div className="logo-wrapper" style={{ minHeight: '90px', height: '90px' }}>
               <div
                 className="logo"
                 style={{
@@ -659,7 +659,7 @@ const Navbar = ({ isLoggedIn = false, isAdmin = false, onLogout = () => { } }) =
                     width={190}
                     height={80}
                     style={{
-                      height: '100px',
+                      height: '80px',
                       width: '200px',
                       objectFit: 'contain',
                       display: 'block',
