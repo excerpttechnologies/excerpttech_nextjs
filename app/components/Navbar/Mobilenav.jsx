@@ -1530,6 +1530,7 @@ const MobileNav = ({ isLoggedIn, onLogout }) => {
                     width: 100%;
                     transition: all 0.3s ease-in-out;
                     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+                    z-index:2000;
                 }
 
                 /* -- Full Mode (Initial) -- */
@@ -1734,9 +1735,9 @@ const MobileNav = ({ isLoggedIn, onLogout }) => {
                         </Link>
 
                         {/* Hamburger appears here only in COMPACT mode */}
-                        <div className="hamburger-btn hamburger-in-top" onClick={toggleMobileNav}>
+                        {/* <div className="hamburger-btn hamburger-in-top" onClick={toggleMobileNav}>
                             <FaBars />
-                        </div>
+                        </div> */}
                     </div>
 
                     {/* BOTTOM BAR: Contact + Buttons (Visible in Full, Hidden in Compact) */}

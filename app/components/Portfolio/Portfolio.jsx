@@ -2271,13 +2271,14 @@ const Portfolio = () => {
 
                 <div className="space50"></div>
             </section>
-{/* 
+
             <section
                 style={{
                     backgroundImage: `url("/images/Newimage/digital-marketing-banner1.webp")`,
                     backgroundPosition: "center",
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "cover",
+                    padding:"3rem"
                 }}
                 id="newsletter"
                 className="portfolio__newsletter"
@@ -2289,10 +2290,45 @@ const Portfolio = () => {
                     </div>
 
                     <form
-                        className="form"
+                        style={{width:"100%",display:"flex",justifyContent:"center",alignItems:"center"}}
                         onSubmit={handleEmailSubmit}
                     >
                         <div className="email-wrapper">
+                            <input
+                                type="email"
+                                name="email"
+                                id="email"
+                                placeholder="Enter your email"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                required
+                                style={{width:"20rem"}}
+                            />
+                            <button type="submit" className="subscribe-btn" style={{width:"fit-content",color:"white",borderRadius:0,height:"3rem"}}>
+                                <span style={{color:'white'}}>Reach Us</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+
+
+
+
+{/* <section style={{width:"100vw",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center",
+        padding:"2rem",color:"white"}}>
+    <div>
+         <div className="text">
+                        <h3>Join to Our Team For More Info</h3>
+                        <p>Excerpt Technologies PVT LTD</p>
+        </div>
+    </div>
+     <form
+         className=""
+         onSubmit={handleEmailSubmit}
+     >
+    <div>
                             <input
                                 type="email"
                                 name="email"
@@ -2305,53 +2341,10 @@ const Portfolio = () => {
                             <button type="submit" className="subscribe-btn">
                                 <span>Reach Us</span>
                             </button>
-                        </div>
-                    </form>
-                </div>
-            </section> */}
-
-
-
-            <section
-    style={{
-        backgroundImage: `url("/images/Newimage/digital-marketing-banner1.webp")`,
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
-    }}
-    id="newsletter"
-    className="portfolio__newsletter"
->
-    <div style={{display:"flex",flexDirection:"column", alignItems:"center",width:"100vw"}} className="container newsletter-Wrapper newsletter4Wrapper">
-        <div className="text text4Container">
-            <h3 className="heading4 Title">Join to Our Team For More Info</h3>
-            <p className="para4 Description">Excerpt Technologies PVT LTD</p>
-        </div>
-
-        <form
-          style={{paddingBottom:"10vh"}}
-            className="form form4Layout"
-            onSubmit={handleEmailSubmit}
-        >
-            <div className="email-wrapper email4Wrapper d-flex">
-                <input
-                    type="email"
-                    name="email"
-                    id="email"
-                    placeholder="Enter your email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                    className="input4Field"
-                />
-                <button style={{width:"10rem",marginTop:".1rem",borderRadius:0,marginLeft:-15}} type="submit" className="subscribe-btn">
-                    <span style={{color:"white"}}>Reach Us</span>
-                </button>
-                <br />
-            </div>
-        </form>
     </div>
-</section>
+    </form>
+</section> */}
+
 
 
 
