@@ -526,12 +526,12 @@ const Navbar = ({ isLoggedIn = false, isAdmin = false, onLogout = () => { } }) =
       <style>{`
         /* Hover effects removed for performance - using click handlers instead */
         .active-link {
-          color: #0554f2 !important;
+          color: #0F766E !important;
           font-weight: 600;
         }
 
         #topheader {
-          background-color: #0554f2;
+          background-color: #0F766E;
           color: white;
           position: relative;
           z-index: 10000;
@@ -563,7 +563,7 @@ const Navbar = ({ isLoggedIn = false, isAdmin = false, onLogout = () => { } }) =
         }
 
         .header-wrapper.scrolled #topheader {
-          background-color: #0554f2;
+          background-color: #0F766E  ;
           min-height: 50px;
           height: 50px;
         }
@@ -807,7 +807,7 @@ const Navbar = ({ isLoggedIn = false, isAdmin = false, onLogout = () => { } }) =
                           <Link href="/contact" className={pathname === "/contact" ? "active-link" : ""}>CONTACT</Link>
                         </li>
                         <li className="menu" style={{ marginBottom: "10px" }}>
-                          <Link href="/careers" className={pathname === "/careers" ? "active-link" : ""} style={{ color: "blue", marginTop: "-5rem" }}>
+                          <Link href="/careers" className={pathname === "/careers" ? "active-link" : ""} style={{ color: "#0F766E  ", marginTop: "-5rem" }}>
                             CAREERS <TiStar className="star blink star-button ml-5" />
                           </Link>
                         </li>

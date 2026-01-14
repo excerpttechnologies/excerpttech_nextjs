@@ -324,7 +324,7 @@ a {
     top: -10px;
     left: -100px;
     position: absolute;
-    background: #0554f2;
+    background: #0F766E;
     transform: skewX(-30deg);
     z-index: 0;
     transition: width 0.3s ease; /* smooth animation */
@@ -450,7 +450,7 @@ a {
 }
 
 .service-card.active a {
-    background: #0554f2;
+    background: #0F766E;
 }
 
 .service-card.active a span {
@@ -495,7 +495,7 @@ a {
     width: 175px;
     height: 60px;
     border-radius: 5px;
-    background: #0554f2;
+    background: #0F766E;
     color: white;
     display: flex;
     align-items: center;
@@ -529,7 +529,7 @@ a {
 }
 
 #footer .footer-body .about-company .logo-wrapper {
-    background-color: #0554f2;
+    background-color: #0F766E  ;
     padding: 11px 59px;
     position: relative;
     margin-bottom: 47px;
@@ -550,7 +550,7 @@ a {
     bottom: -20px;
     left: 20%;
     rotate: 45deg;
-    background-color: #0554f2;
+    background-color: #0F766E  ;
 }
 
 @media (max-width: 575px) {
@@ -589,7 +589,7 @@ a {
     align-items: center;
     justify-content: center;
     font-size: 20px;
-    border: 1px solid #0554f2;
+    border: 1px solid #0F766E;
     cursor: pointer;
 }
 
@@ -598,7 +598,7 @@ a {
 }
 
 #footer .footer-body .about-company .content .socials ul li.active {
-    background: #0554f2;
+    background: #0F766E;
 }
 
 #footer .footer-body .about-company .content .socials ul li.active a {
@@ -656,7 +656,7 @@ a {
     justify-content: center;
     border-radius: 50%;
     margin-right: 15px;
-    background-color: #0554f2;
+    background-color: #0F766E  ;
     border: 2px solid white;
     color: white;
     cursor: pointer;
@@ -665,11 +665,11 @@ a {
 
 #footer .footer-body .wrapper .contact .icon-wrapper:hover {
     transform: scale(1.05);
-    background-color: #0339b8;
+    background-color: #0F766E ;
 }
 
 #footer .footer-body .wrapper .contact .icon-wrapper.active {
-    background-color: #0554f2;
+    background-color: #0F766E  ;
     color: white;
 }
 
@@ -756,13 +756,13 @@ a {
 
 #footer .footer-body .about-company .content .socials ul li {
     border: 2px solid white !important;
-    background-color: #0554f2 !important;
+    background-color: #0F766E   !important;
     width: 40px !important;
     height: 40px !important;
 }
 
 #footer .footer-body .about-company .content .socials ul li:hover {
-    background-color: #0339b8 !important;
+    background-color: #0F766E  !important;
     transform: scale(1.05) !important;
 }
 
@@ -922,7 +922,7 @@ button {
   .button-container button {
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #007bff;
+    background-color: #0F766E  ;
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -1423,7 +1423,7 @@ button {
 }
 
 .homecard-slider-button {
-  background: #007bff;
+  background: #0F766E  ;
   color: white;
   border: none;
   padding: 12px 18px;
@@ -1442,7 +1442,7 @@ button {
 /* Hover effect for slider buttons */
 .homecard-slider-button:hover {
   transform: scale(1.1);
-  background-color: #0056b3;
+  background-color: #0F766E  ;
   box-shadow: 0 6px 12px rgba(0,0,0,0.3);
 }
 
@@ -1855,7 +1855,7 @@ button {
   button[type="submit"] {
     width: 100%;
     padding: 10px;
-    background-color: #007bff;
+    background-color: #0F766E ;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -4273,7 +4273,7 @@ ul li {
 }
 
 .button-container button {
-    background-color: #007bff;
+    background-color: #0F766E  ;
     color: white;
 }
 
@@ -4413,7 +4413,7 @@ ul li {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #007bff;
+    background-color: #0F766E  ;
     color: #fff;
     border: none;
     border-radius: 50%;
@@ -4433,7 +4433,7 @@ ul li {
 /* Hover effect for scroll-to-top button */
 .scroll-to-top-btn:hover {
     transform: translateY(-3px) scale(1.1);
-    background-color: #0056b3;
+    background-color: #0F766E  ;
     box-shadow: 0 4px 12px rgba(0, 123, 255, 0.4);
     opacity: 1;
 }
@@ -4827,7 +4827,7 @@ ul li {
     width: 175px;
     height: 60px;
     border-radius: 5px;
-    background: #0554f2;
+    background: #0F766E;
     color: white;
     display: flex;
     align-items: center;
@@ -4844,7 +4844,7 @@ ul li {
 }
 
 #footer .footer-body .about-company .logo-wrapper {
-    background-color: #0554f2;
+    background-color: #0F766E ;
     padding: 11px 59px;
     position: relative;
     margin-bottom: 47px;
@@ -4863,7 +4863,7 @@ ul li {
     bottom: -20px;
     left: 20%;
     rotate: 45deg;
-    background-color: #0554f2;
+    background-color: #0F766E ;
 }
 
 #footer .footer-body .about-company .content {
@@ -4896,7 +4896,7 @@ ul li {
 }
 
 #footer .footer-body .about-company .content .socials ul li.active {
-    background: #0554f2;
+    background: #0F766E;
 }
 
 #footer .footer-body .about-company .content .socials ul li.active a {
@@ -4952,7 +4952,7 @@ ul li {
 }
 
 #footer .footer-body .wrapper .contact .icon-wrapper.active {
-    background-color: #0554f2;
+    background-color: #0F766E  ;
     color: white;
 }
 
@@ -5014,13 +5014,13 @@ ul li {
 
 #footer .footer-body .about-company .content .socials ul li {
     border: 2px solid white !important;
-    background-color: #0554f2 !important;
+    background-color: #0F766E   !important;
     width: 40px !important;
     height: 40px !important;
 }
 
 #footer .footer-body .about-company .content .socials ul li:hover {
-    background-color: #0339b8 !important;
+    background-color: #0F766E  !important;
     transform: scale(1.05) !important;
 }
 
@@ -5088,7 +5088,7 @@ ul li {
     }
     
     #footer .footer-body .about-company .logo-wrapper {
-        background: linear-gradient(45deg, #0554f2, #0339b8);
+        background: linear-gradient(45deg, #0F766E  , #0F766E  );
         padding: 20px;
         margin-bottom: 40px;
         text-align: center;
@@ -5371,7 +5371,7 @@ body {
 }
 
 #navbar-1 {
-    background-color: #0554f2;
+    background-color: #0F766E ;
     width: 100vw;
     box-shadow: 50px 0px 25px rgba(0, 0, 0, 0);
     position: relative;
@@ -5505,7 +5505,7 @@ body {
     content: "";
     width: 25px;
     height: 25px;
-    background-color: #0554f2;
+    background-color: #0F766E  ;
     position: absolute;
     bottom: -50px;
     left: 50%;
@@ -5554,7 +5554,7 @@ body {
     justify-content: center;
     border-radius: 5px;
     color: white;
-    background-color: #0554f2;
+    background-color: #0F766E  ;
 }
 
 @media (max-width: 575px) {
@@ -6365,7 +6365,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, 50%);
-    background: #0554f2;
+    background: #0F766E;
     border-radius: 50%;
     cursor: pointer;
     opacity: 0;
@@ -6562,7 +6562,7 @@ body {
 }
 
 .service-details .service .service-list li {
-    background: #0554f2;
+    background: #0F766E;
     padding-left: 2px;
     border-radius: 5px;
 ;
@@ -6595,7 +6595,7 @@ body {
 }
 
 .service-details .service .service-list .active a .item {
-    background: #0554f2;
+    background: #0F766E;
     color: white;
     font-weight: 500;
 }
@@ -6620,7 +6620,7 @@ body {
 }
 
 .service-details .squre-banner {
-    background: #0554f2;
+    background: #0F766E;
     border-radius: 5px;
     padding: 75px 90px 75px 90px;
     text-align: center;
@@ -6713,7 +6713,7 @@ body {
 .portfolio__newsletter .newsletter-Wrapper .form .subscribe-btn {
     width: 30%;
     height: 60px;
-    background: #0554f2;
+    background: #0F766E;
     color: white;
     display: flex;
     align-items: center;
@@ -6933,7 +6933,7 @@ body {
     width: 60%;
     -webkit-clip-path: polygon(0 0, 0% 100%, 100% 0);
     clip-path: polygon(0 0, 0% 100%, 100% 0);
-    background: #0554f2;
+    background: #0F766E;
 }
 
 .login-1 .col-right {
@@ -7099,7 +7099,7 @@ body {
   }
 
   .star{
-    color: blue;
+    color: #0F766E ;
     font-size: 20px;
     margin-top: -30px;
   }
@@ -7273,7 +7273,7 @@ body {
 
 @media screen and (max-width: 768px) {
     *{
-       overflow-x: hidden;
+       /* overflow-x: hidden; */
     }
 }
 
@@ -7355,7 +7355,7 @@ body {
     }
 
     .service-details .service .service-list .active a .item {
-        background: #0554f2;
+        background: #0F766E;
         color: white;
         font-weight: 600;
     }
@@ -7371,7 +7371,7 @@ body {
     .service-details .service .underline {
         width: 60px;
         border: 3px solid #0554f2;
-        background: #0554f2;
+        background: #0F766E;
         margin-top: 10px;
         margin-bottom: 25px;
         border-radius: 3px;
@@ -7394,7 +7394,7 @@ body {
         }
         
         .service-details .service .service-list li:active a .item {
-            background: #0554f2;
+            background: #0F766E;
             color: white;
         }
         
@@ -7529,6 +7529,7 @@ body {
  width: 50%;
  height: 300%;
  background-color: rgba(23, 44, 124, 0.5) ;
+ /* background-color: rgba(30, 58, 138, 1); */
  position: relative;
 }
 .slide-box > .box1 {

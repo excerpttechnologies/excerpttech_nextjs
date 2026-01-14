@@ -1534,7 +1534,7 @@ const MobileNav = ({ isLoggedIn, onLogout }) => {
 
                 /* -- Full Mode (Initial) -- */
                 .header-full .top-brand-bar {
-                    background-color: #0554f2; /* Blue */
+                    background-color: #0F766E ; /* Blue */
                     padding: 10px 15px;
                     display: flex;
                     align-items: center;
@@ -1593,7 +1593,7 @@ const MobileNav = ({ isLoggedIn, onLogout }) => {
                 }
 
                 .login-btn {
-                    background-color: #007bff;
+                    background-color: #0F766E ;
                     color: white;
                     border: none;
                     padding: 6px 12px;
@@ -1686,7 +1686,7 @@ const MobileNav = ({ isLoggedIn, onLogout }) => {
                     padding: 12px 0;
                     font-size: 16px;
                     font-weight: 600;
-                    color: #0554f2;
+                    color: #0F766E ;
                     text-decoration: none;
                     display: flex;
                     justify-content: space-between;
@@ -1783,14 +1783,14 @@ const MobileNav = ({ isLoggedIn, onLogout }) => {
                         {/* Services */}
                         <li className="menu-item">
                             <div className="menu-link" onClick={(e) => toggleDropdown('services', e)}>
-                                <span>SERVICES</span>
+                                <span style={{color: "#0F766E"}}>SERVICES</span>
                                 {activeDropdown === 'services' ? <FaChevronDown size={12}/> : <FaChevronRight size={12}/>}
                             </div>
                             <div className={`dropdown-container ${activeDropdown === 'services' ? 'show' : ''}`}>
                                 
                                 {/* Web Design Sub-Menu */}
                                 <div className="menu-link menu-link-sub" style={{justifyContent: 'space-between'}} onClick={(e) => toggleSubDropdown('webdesign', e)}>
-                                    <span>Web Design & Development</span>
+                                    <span style={{color: "#0F766E"}}>Web Design & Development</span>
                                     {activeSubDropdown === 'webdesign' ? <FaChevronDown size={10}/> : <FaChevronRight size={10}/>}
                                 </div>
                                 <div className={`dropdown-container ${activeSubDropdown === 'webdesign' ? 'show' : ''}`} style={{background: '#fff', paddingLeft: '10px'}}>

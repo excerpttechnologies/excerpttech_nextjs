@@ -1232,8 +1232,8 @@ const Portfolio = () => {
          {
             id: 3,
             title: "Car Captain",
-            category: "E-Com",
-            type: "Car Services",
+            category: "E-com",
+            type: "E-Commerce",
             image: "/portfolio/car.webp",
             link: "https://carcaptain.in/",
             className: ""
@@ -1752,7 +1752,7 @@ const Portfolio = () => {
 
                 .subscribe-btn {
                     padding: 15px 40px;
-                    background: #0011ff;
+                    background: #0F766E ;
                     color: white;
                     border: none;
                     border-radius: 50px;
@@ -1765,7 +1765,7 @@ const Portfolio = () => {
                 }
 
                 .subscribe-btn:hover {
-                    background: #0000cc;
+                    background: #0F766E ;
                     transform: translateY(-2px);
                     box-shadow: 0 6px 20px rgba(0, 17, 255, 0.4);
                 }
@@ -1822,7 +1822,8 @@ const Portfolio = () => {
                         padding: 10px 18px !important;
                         font-size: 13px !important;
                         white-space: nowrap;
-                        flex-shrink: 0;
+                        // flex-shrink: 0;
+                        overflow:auto;
                     }
 
                     .email-wrapper {
@@ -2193,7 +2194,7 @@ const Portfolio = () => {
                                         margin: '25px 8px',
                                         border: 'none',
                                         borderRadius: '25px',
-                                        backgroundColor: activeTab === category ? '#0011ffff' : 'transparent',
+                                        backgroundColor: activeTab === category ? '#0F766E ' : 'transparent',
                                         color: activeTab === category ? 'white' : '#333',
                                         cursor: 'pointer',
                                         fontWeight: '500',
@@ -2250,7 +2251,7 @@ const Portfolio = () => {
                                     }}
                                     onMouseEnter={(e) => {
                                         if (!showAll) {
-                                            e.target.style.backgroundColor = '#0011ffff';
+                                            e.target.style.backgroundColor = '#0F766E  ';
                                             e.target.style.color = 'white';
                                         }
                                     }}

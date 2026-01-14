@@ -277,7 +277,7 @@ const Footer1 = () => {
           backgroundImage: `url("/images/footer/bg.webp"), linear-gradient(0deg, #03041c, #03041c)` 
         }}
       >
-        <div className="footer-body" style={{ backgroundColor: "#04061F", padding: "40px" }}>
+        <div className="footer-body" style={{ backgroundColor: "#0B2545", padding: "40px" }}>
           <div className="container responsive_ele">
             <div className="row dis g-3 d-flex justify-content-center align-items-center vh-100">
               <div 

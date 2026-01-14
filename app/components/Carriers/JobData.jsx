@@ -2410,7 +2410,7 @@ const JobData = () => {
               boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'
             }}>
               <div style={{
-                background: '#007bff',
+                background: '#0F766E  ',
                 color: 'white',
                 padding: '20px',
                 textAlign: 'center'
@@ -2444,7 +2444,7 @@ const JobData = () => {
                   <button 
                     className="btn"
                     style={{
-                      backgroundColor: '#007bff',
+                      backgroundColor: '#0F766E  ',
                       color: 'white',
                       border: 'none',
                       borderRadius: '25px',
@@ -2478,7 +2478,7 @@ const JobData = () => {
                 boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'
               }}>
                 <div style={{
-                  background: '#007bff',
+                  background: '#0F766E ',
                   color: 'white',
                   padding: '20px'
                 }}>
@@ -2656,7 +2656,7 @@ const JobData = () => {
                       }}
                       onClick={() => setShowForm(true)}
                       onMouseEnter={(e) => {
-                        e.target.style.backgroundColor = '#007bff';
+                        e.target.style.backgroundColor = '#0F766E  ';
                         e.target.style.color = 'white';
                       }}
                       onMouseLeave={(e) => {
